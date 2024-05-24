@@ -46,7 +46,7 @@
                 <key>source_path</key>
                 <string>%pathname%/%app_name%</string>
                 <key>destination_path</key>
-                <string>~/Library/AutoPkg/Packages/%app_name%</string>
+                <string>%pkgroot%/Applications/%app_name%</string>
             </dict>
         </dict>
         <dict>
@@ -76,6 +76,17 @@
                         </dict>
                     </array>
                 </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%pkg_path%</string>
+                <key>destination_path</key>
+                <string>/Users/admin/Library/AutoPkg/Packages/%NAME%-%version%</string>
             </dict>
         </dict>
     </array>
