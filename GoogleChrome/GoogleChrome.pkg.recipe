@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest Google Chrome disk image and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.pkg.googlechrome</string>
+    <string>com.github.prop-office.autopkg-recipes.pkg.googlechrome</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
