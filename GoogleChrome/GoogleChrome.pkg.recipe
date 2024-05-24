@@ -12,7 +12,7 @@
         <string>GoogleChrome</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.googlechrome</string>
+    <string>com.github.prop-office.autopkg-recipes.download.googlechrome</string>
     <key>Process</key>
     <array>
         <dict>
@@ -46,7 +46,7 @@
                 <key>source_path</key>
                 <string>%pathname%/%app_name%</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/%app_name%</string>
+                <string>~/Library/AutoPkg/Packages/%app_name%</string>
             </dict>
         </dict>
         <dict>
