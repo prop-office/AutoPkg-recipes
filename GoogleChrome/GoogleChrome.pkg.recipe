@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>GoogleChrome</string>
         <key>PACKAGES</key>
-        <string>/Users/admin/AutoPkg/Packages</string>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
     </dict>
     <key>ParentRecipe</key>
     <string>com.github.prop-office.autopkg-recipes.download.googlechrome</string>
