@@ -8,7 +8,7 @@
     - x86_64 - for Intel (default)
     - arm64 - for Apple Silicon</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.pkg.yandex-browser</string>
+    <string>com.github.prop-office.autopkg-recipes.applesilicon.pkg.yandex-browser</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
