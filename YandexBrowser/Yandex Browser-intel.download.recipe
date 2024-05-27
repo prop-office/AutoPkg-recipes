@@ -8,7 +8,7 @@
     - x86_64 - for Intel (default)
     - arm64 - for Apple Silicon</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.download.yandex-browser</string>
+    <string>com.github.prop-office.autopkg-recipes.intel.download.yandex-browser</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -30,7 +30,7 @@
                 <key>url</key>
                 <string>https://browser.yandex.ru/download?arch=%ARCH%</string>
                 <key>filename</key>
-                <string>%NAME%.dmg</string>
+                <string>%NAME%-%ARCH%.dmg</string>
                 <key>request_headers</key>
                     <dict>
                         <key>User-Agent</key>

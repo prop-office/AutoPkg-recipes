@@ -21,7 +21,7 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.prop-office.autopkg-recipes.download.yandex-browser</string>
+    <string>com.github.prop-office.autopkg-recipes.applesilicon.download.yandex-browser</string>
     <key>Process</key>
     <array>
         <dict>
@@ -86,6 +86,7 @@
                     </array>
                 </dict>
             </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>Copier</string>
@@ -95,8 +96,6 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
                 <key>destination_path</key>
                 <string>%PACKAGES%/%NAME%-%version%.pkg</string>
-            </dict>
-        </dict>
             </dict>
         </dict>
     </array>
