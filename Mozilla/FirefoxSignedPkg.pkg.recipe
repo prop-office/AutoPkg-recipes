@@ -23,7 +23,7 @@ See the following URL for possible LOCALE values:
 	<key>MinimumVersion</key>
     <string>2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.FirefoxSignedPkg</string>
+	<string>com.github.prop-office.autopkg-recipes.download.FirefoxSignedPkg</string>
 	<key>Process</key>
     <array>
         <dict>
@@ -37,6 +37,6 @@ See the following URL for possible LOCALE values:
                 <string>%PACKAGES%/%NAME%-%version%.pkg</string>
             </dict>
         </dict>
-	<array/>
+	</array>
 </dict>
 </plist>
