@@ -12,6 +12,8 @@
 		<string>us.zoom.xos</string>
 		<key>NAME</key>
 		<string>Zoom</string>
+        <key>PACKAGES</key>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.1</string>
