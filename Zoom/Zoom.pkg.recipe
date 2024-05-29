@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the current release version of Zoom and builds a package.</string>
 	<key>Identifier</key>
-	<string>com.github.homebysix.pkg.Zoom</string>
+	<string>com.github.prop-office.autopkg-recipes.pkg.zoomus</string>
 	<key>Input</key>
 	<dict>
 		<key>BUNDLE_ID</key>
@@ -16,7 +16,7 @@
 	<key>MinimumVersion</key>
 	<string>1.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.hansen-m.download.zoomus</string>
+	<string>com.github.prop-office.autopkg-recipes.download.zoomus</string>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -74,6 +74,8 @@
 			<string>PlistReader</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkg_request</key>
@@ -101,8 +103,6 @@
 					<string>%version%</string>
 				</dict>
 			</dict>
-			<key>Processor</key>
-			<string>PkgCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
