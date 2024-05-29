@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest Slack.</string>
 	<key>Identifier</key>
-	<string>com.github.prop-office.autopkg-recipes.download.Slack</string>
+	<string>com.github.prop-office.autopkg-recipes.download.slack</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

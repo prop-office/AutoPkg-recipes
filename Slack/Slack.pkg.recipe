@@ -3,40 +3,98 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>This recipe downloads the signed installer package that Mozilla made available starting in Firefox 69.0. Because the downloaded file is already a package, this pkg recipe does not add any further actions.
-
-The RELEASE key used in the standard Firefox recipes are not yet supported.
-LOCALE controls the language localization to be downloaded.
-Examples include 'en-US', 'de', 'sv-SE', and 'zh-TW'
-See the following URL for possible LOCALE values:
-    http://ftp.mozilla.org/pub/firefox/releases/latest/README.txt
-</string>
+	<string>Downloads the latest version of Slack and makes a pkg of it</string>
 	<key>Identifier</key>
-	<string>com.github.prop-office.autopkg-recipes.pkg.FirefoxSignedPkg</string>
+	<string>com.github.prop-office.autopkg-recipes.pkg.Slack</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Firefox</string>
+		<string>Slack</string>
         <key>PACKAGES</key>
         <string>/Users/admin/Library/AutoPkg/Packages</string>
+		<key>PKG_ID</key>
+		<string>com.tinyspeck.slackmacgap</string>
 	</dict>
 	<key>MinimumVersion</key>
-    <string>2.0</string>
+    <string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.prop-office.autopkg-recipes.download.FirefoxSignedPkg</string>
+	<string>com.github.prop-office.autopkg-recipes.download.slack</string>
 	<key>Process</key>
     <array>
+		<dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+			</dict>
+		</dict>
         <dict>
             <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%-%version%.pkg</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/Slack.app</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications/Slack.app</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>PkgCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_request</key>
+                <dict>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
+                    <key>version</key>
+                    <string>%version%</string>
+                    <key>id</key>
+                    <string>%PKG_ID%</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
+                    <key>chown</key>
+                    <array>
+                        <dict>
+                            <key>path</key>
+                            <string>Applications</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>admin</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
                 <key>destination_path</key>
                 <string>%PACKAGES%/%NAME%-%version%.pkg</string>
             </dict>
         </dict>
-	</array>
+    </array>
 </dict>
 </plist>
