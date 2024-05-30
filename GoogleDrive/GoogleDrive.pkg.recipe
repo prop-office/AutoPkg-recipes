@@ -19,7 +19,6 @@
     <string>com.github.prop-office.autopkg-recipes.download.GoogleDrive</string>
     <key>Process</key>
     <array>
-        <dict>
 		<dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
@@ -139,41 +138,5 @@
             </dict>
         </dict>
 	</array>
-</dict>
-</plist>
-
-
-
-
-
-
-
-
-
-
-
-
-            <key>Processor</key>
-            <string>Copier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>source_path</key>
-                <string>%pathname%/%NAME%.pkg</string>
-                <key>destination_path</key>
-                <string>%PACKAGES%/%NAME%-%version%.pkg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Copier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>source_path</key>
-                <string>%PACKAGES%/%NAME%-%version%.pkg</string>
-                <key>destination_path</key>
-                <string>%PACKAGES%/%NAME%.pkg</string>
-            </dict>
-        </dict>
-    </array>
 </dict>
 </plist>
