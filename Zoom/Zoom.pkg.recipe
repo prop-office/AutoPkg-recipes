@@ -22,6 +22,8 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -32,8 +34,6 @@
 				<key>pkgroot</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
