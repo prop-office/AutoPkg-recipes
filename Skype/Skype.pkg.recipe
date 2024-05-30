@@ -16,7 +16,7 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.Skype</string>
+    <string>com.github.prop-office.autopkg-recipes.download.Skype</string>
     <key>Process</key>
     <array>
         <dict>
