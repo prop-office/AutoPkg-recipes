@@ -65,7 +65,7 @@
                     <key>version</key>
                     <string>%version%</string>
                     <key>id</key>
-                    <string>%PKG_ID%</string>
+                    <string>%BundleID%</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
