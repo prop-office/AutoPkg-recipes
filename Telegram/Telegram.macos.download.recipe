@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of macos version of Telegram.</string>
+    <string>Downloads macos version of Telegram.</string>
     <key>Identifier</key>
     <string>com.github.prop-office.autopkg-recipes.download.macos.telegram</string>
     <key>Input</key>
@@ -34,6 +34,10 @@
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
         </dict>
         <dict>
             <key>Processor</key>

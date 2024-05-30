@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current release version of Telegram-macos and builds a package.</string>
+	<string>Downloads macos version of Telegram and builds a package.</string>
 	<key>Identifier</key>
 	<string>com.github.prop-office.autopkg-recipes.pkg.macos.telegram</string>
 	<key>Input</key>
@@ -24,13 +24,33 @@
 			<string>PkgRootCreator</string>
 			<key>Arguments</key>
 			<dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
 				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/Telegram.app</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications/Telegram.app</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
 			</dict>
 		</dict>
 		<dict>
@@ -42,8 +62,12 @@
 				<dict>
                     <key>pkgname</key>
                     <string>%NAME%-%version%</string>
-					<key>version</key>
-					<string>%version%</string>
+                    <key>version</key>
+                    <string>%version%</string>
+                    <key>id</key>
+                    <string>%PKG_ID%</string>
+                    <key>options</key>
+                    <string>purge_ds_store</string>
 					<key>chown</key>
 					<array>
 						<dict>
@@ -55,8 +79,6 @@
 							<string>root</string>
 						</dict>
 					</array>
-					<key>options</key>
-					<string>purge_ds_store</string>
 				</dict>
 			</dict>
 		</dict>
