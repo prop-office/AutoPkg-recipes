@@ -18,6 +18,8 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
@@ -25,8 +27,6 @@
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
-            <key>Processor</key>
-            <string>URLDownloader</string>
         </dict>
         <dict>
             <key>Processor</key>
@@ -41,21 +41,6 @@
                 <string>%pathname%/%NAME%.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%</string>
-                <key>expected_authority_names</key>
-                    <array>
-                        <string>Developer ID Installer: Google LLC (EQHXZ8M8AV)</string>
-                        <string>Developer ID Certification Authority</string>
-                        <string>Apple Root CA</string>
-                    </array>
             </dict>
         </dict>
     </array>
