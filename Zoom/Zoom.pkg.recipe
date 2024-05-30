@@ -36,6 +36,8 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -43,10 +45,10 @@
 				<key>flat_pkg_path</key>
 				<string>%pathname%</string>
 			</dict>
-			<key>Processor</key>
-			<string>FlatPkgUnpacker</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -54,10 +56,10 @@
 				<key>pkg_payload_path</key>
 				<string>%RECIPE_CACHE_DIR%/expanded/zoomus.pkg/Payload</string>
 			</dict>
-			<key>Processor</key>
-			<string>PkgPayloadUnpacker</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
 			<key>Arguments</key>
 			<dict>
 				<key>info_path</key>
@@ -72,8 +74,6 @@
 					<string>min_os_version</string>
 				</dict>
 			</dict>
-			<key>Processor</key>
-			<string>PlistReader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>

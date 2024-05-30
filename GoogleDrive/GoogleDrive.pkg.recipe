@@ -12,8 +12,6 @@
         <string>GoogleDrive</string>
         <key>PACKAGES</key>
         <string>/Users/admin/Library/AutoPkg/Packages</string>
-        <key>VERSIONTYPE</key>
-        <string>CFBundleVersion</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
@@ -22,6 +20,139 @@
     <key>Process</key>
     <array>
         <dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/expanded</string>
+				<key>flat_pkg_path</key>
+				<string>%pathname%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/expanded/GoogleDrive.pkg/Payload</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>info_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/GoogleDrive.app/Contents/Info.plist</string>
+				<key>plist_keys</key>
+				<dict>
+					<key>CFBundleVersion</key>
+					<string>version</string>
+					<key>CFBundleShortVersionString</key>
+					<string>jamfversion</string>
+					<key>LSMinimumSystemVersion</key>
+					<string>min_os_version</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_request</key>
+				<dict>
+                    <key>pkgname</key>
+                    <string>%NAME%-%version%</string>
+					<key>version</key>
+					<string>%version%</string>
+					<key>chown</key>
+					<array>
+						<dict>
+							<key>group</key>
+							<string>admin</string>
+							<key>path</key>
+							<string>Applications</string>
+							<key>user</key>
+							<string>root</string>
+						</dict>
+					</array>
+					<key>id</key>
+					<string>%BUNDLE_ID%</string>
+					<key>options</key>
+					<string>purge_ds_store</string>
+					<key>scripts</key>
+					<string>scripts</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PathDeleter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>path_list</key>
+				<array>
+					<string>%RECIPE_CACHE_DIR%/expanded</string>
+				</array>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/%NAME%-%version%.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%PACKAGES%/%NAME%-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/%NAME%.pkg</string>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
+
+
+
+
+
+
+
+
+
+
+
+
             <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
