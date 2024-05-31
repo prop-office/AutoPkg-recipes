@@ -10,7 +10,7 @@ LibreOffice Latest is the stable version with the most recent features. Users in
 The architecture (ARCH) can be 'x86_64' or 'aarch64'
 </string>
 	<key>Identifier</key>
-	<string>com.github.prop-office.autopkg-recipes.download.LibreOffice</string>
+	<string>io.github.hjuutilainen.download.LibreOffice</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -19,13 +19,22 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 		<string>Latest</string>
 		<key>ARCH</key>
 		<string>x86_64</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Comment</key>
+			<string>LibreOffice uses both x86_64 AND x86-64 in the download path. Here we build the x86-64 or aarch64 part.</string>
+			<key>Processor</key>
+			<string>CreateLibreOfficeAuxArchName</string>
+			<key>Arguments</key>
+			<dict>
+				<key>arch_name</key>
+				<string>%ARCH%</string>
+			</dict>
+		</dict>
 		<dict>
 			<key>Comment</key>
 			<string>Try to parse the the 'Latest' or 'Previous' version from current release notes</string>
@@ -53,14 +62,9 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.libreoffice.org/donate/dl/mac-%ARCH%/%version%/en/LibreOffice_%version%_MacOS_%ARCH%.dmg</string>
+				<string>https://download.documentfoundation.org/libreoffice/stable/%version%/mac/%ARCH%/LibreOffice_%version%_MacOS_%aux_arch_name%.dmg</string>
 				<key>filename</key>
 				<string>%NAME%-%ARCH%.dmg</string>
-                    <key>request_headers</key>
-                    <dict>
-                        <key>User-Agent</key>
-                        <string>%USER_AGENT%</string>
-                    </dict>
 			</dict>
 		</dict>
 		<dict>
