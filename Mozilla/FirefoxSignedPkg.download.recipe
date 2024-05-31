@@ -47,6 +47,8 @@ See the following URL for possible LOCALE values:
 			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
 				<key>filename</key>
@@ -54,14 +56,14 @@ See the following URL for possible LOCALE values:
 				<key>url</key>
 				<string>https://releases.mozilla.org/pub/firefox/releases/%version%/mac/%LOCALE%/Firefox%20%version%.pkg</string>
 			</dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>expected_authority_names</key>
@@ -73,8 +75,6 @@ See the following URL for possible LOCALE values:
 				<key>input_path</key>
 				<string>%pathname%</string>
 			</dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
 		</dict>
 	</array>
 </dict>
