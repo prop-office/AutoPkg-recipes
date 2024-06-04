@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Visual Studio Code</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://code.visualstudio.com/sha/download?build=stable%26os=darwin-universal</string>
+		<string>https://go.microsoft.com/fwlink/?LinkID=2156837</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
