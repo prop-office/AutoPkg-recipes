@@ -52,7 +52,7 @@
             <key>Arguments</key>
             <dict>
                 <key>archive_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%.zip</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
                 <key>destination_path</key>
                 <string>%pkgroot%/Applications/%NAME%.app</string>
             </dict>
