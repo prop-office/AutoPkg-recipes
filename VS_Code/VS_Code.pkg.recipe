@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest verison of Viber and builds a package.</string>
+	<string>Downloads the latest verison of Visual Studio Code and builds a package.</string>
 	<key>Identifier</key>
 	<string>com.github.prop-office.autopkg-recipes.pkg.vs_code</string>
 	<key>Input</key>

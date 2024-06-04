@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest verison of Viber</string>
+	<string>Downloads the latest verison of Visual Studio Code</string>
 	<key>Identifier</key>
 	<string>com.github.prop-office.autopkg-recipes.download.vs_code</string>
 	<key>Input</key>
@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Visual Studio Code</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://code.visualstudio.com/sha/download?build=stable&os=darwin-universal</string>
+		<string>https://code.visualstudio.com/sha/download?build=stable\&os=darwin-universal</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
