@@ -54,7 +54,7 @@
                 <key>archive_path</key>
                 <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications/%NAME%.app</string>
+                <string>%pkgroot%/Applications</string>
             </dict>
         </dict>
         <dict>
