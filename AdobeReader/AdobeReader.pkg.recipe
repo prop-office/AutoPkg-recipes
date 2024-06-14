@@ -6,7 +6,7 @@
 	<string>Downloads the current Adobe Acrobat Reader pkg and repackages, replacing a problematic preinstall script,
 and enabling installation on non-boot volumes.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.pkg.AdobeReader</string>
+	<string>com.github.prop-office.autopkg-recipes.pkg.AdobeReader</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -17,7 +17,7 @@ and enabling installation on non-boot volumes.</string>
 	<key>MinimumVersion</key>
 	<string>1.4</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.AdobeReader</string>
+	<string>com.github.prop-office.autopkg-recipes.download.AdobeReader</string>
 	<key>Process</key>
 	<array>
 		<dict>
