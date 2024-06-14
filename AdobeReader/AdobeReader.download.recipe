@@ -21,7 +21,7 @@
 	<array>
 		<dict>
 			<key>Processor</key>
-			<string>URLProvider</string>
+			<string>AdobeReaderURLProvider</string>
 			<key>Arguments</key>
 			<dict>
 				<key>os_version</key>
