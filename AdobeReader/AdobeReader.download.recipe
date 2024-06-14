@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Adobe Acrobat Reader.</string>
 	<key>Identifier</key>
-	<string>com.github.autopkg.download.AdobeReader</string>
+	<string>com.github.prop-office.autopkg-recipes.download.AdobeReader</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -20,13 +20,13 @@
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>URLProvider</string>
 			<key>Arguments</key>
 			<dict>
 				<key>os_version</key>
 				<string>%OS_VERSION%</string>
 			</dict>
-			<key>Processor</key>
-			<string>AdobeReaderURLProvider</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -42,6 +42,8 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>expected_authority_names</key>
@@ -53,8 +55,6 @@
 				<key>input_path</key>
 				<string>%pathname%/*.pkg</string>
 			</dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
 		</dict>
 	</array>
 </dict>
