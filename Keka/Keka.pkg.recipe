@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>GoogleChrome</string>
+        <string>Keka</string>
         <key>PACKAGES</key>
         <string>/Users/admin/Library/AutoPkg/Packages</string>
     </dict>
