@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Docker Desktop and creates a package. See the download recipe description for information about using the PLATFORM_ARCH input variable to download the Intel/Apple Silicon version of Docker.</string>
 	<key>Identifier</key>
-	<string>com.github.prop-office.autopkg-recipes.pkg.DockerDesktop</string>
+	<string>com.github.prop-office.autopkg-recipes.intel.pkg.DockerDesktop</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>1.4.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.prop-office.autopkg-recipes.download.DockerDesktop</string>
+	<string>com.github.prop-office.autopkg-recipes.intel.download.DockerDesktop</string>
 	<key>Process</key>
 	<array>
 		<dict>
