@@ -5,16 +5,18 @@
     <key>Description</key>
     <string>Downloads latest VLC disk image and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.pkg.VLC</string>
+    <string>com.github.prop-office.autopkg-recipes.pkg.VLC</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>VLC</string>
+        <key>PACKAGES</key>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.VLC</string>
+    <string>com.github.prop-office.autopkg-recipes.download.VLC</string>
     <key>Process</key>
     <array>
         <dict>
@@ -93,6 +95,28 @@
                         </dict>
                     </array>
                 </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/%NAME%-%version%.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%PACKAGES%/%NAME%-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/%NAME%.pkg</string>
             </dict>
         </dict>
     </array>

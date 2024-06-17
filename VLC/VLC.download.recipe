@@ -11,7 +11,7 @@ Allowable ARCHITECTURE values (as of October 2021) include:
 - "arm64" for the Apple Silicon build
 </string>
     <key>Identifier</key>
-    <string>com.github.autopkg.download.VLC</string>
+    <string>com.github.prop-office.autopkg-recipes.download.VLC</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
