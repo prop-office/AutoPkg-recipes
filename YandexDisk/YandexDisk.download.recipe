@@ -12,6 +12,8 @@
         <string>YandexDisk</string>
         <key>DOWNLOAD_URL</key>
         <string>https://disk.yandex.ru/download/Yandex.Disk.dmg/?instant=1</string>
+        <key>USER_AGENT</key>
+        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -26,6 +28,11 @@
                 <string>%DOWNLOAD_URL%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
+                <key>request_headers</key>
+                    <dict>
+                        <key>User-Agent</key>
+                        <string>%USER_AGENT%</string>
+                    </dict>
             </dict>
         </dict>
         <dict>
