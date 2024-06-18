@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download Pritunl OpenVPN client.</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.download.pritunl</string>
+    <string>com.github.prop-office.autopkg-recipes.download.Pritunl</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -36,20 +36,6 @@
             <key>Processor</key>
             <string>URLDownloader</string>
         </dict>
-		<dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
