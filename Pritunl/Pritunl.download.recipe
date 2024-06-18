@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Download Pritunl OpenVPN client.</string>
+    <key>Identifier</key>
+    <string>com.github.prop-office.autopkg-recipes.download.pritunl</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Pritunl</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>GitHubReleasesInfoProvider</string>
+            <key>Arguments</key>
+            <dict>
+            <key>sort_by_highest_tag_names</key>
+            <true/>
+            <key>asset_regex</key>
+            <string>^Pritunl.pkg.zip$</string>
+            <key>github_repo</key>
+            <string>pritunl/pritunl-client-electron</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/%NAME%.zip</string>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pkgroot%/Applications/%NAME%.app</string>
+                <key>strict_verification</key>
+                <false/>
+                <key>requirement</key>
+                <string>identifier "com.electron.pritunl" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = U22BLATN63</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
