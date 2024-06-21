@@ -10,8 +10,6 @@
     <dict>
         <key>NAME</key>
         <string>Krita</string>
-        <key>url</key>
-        <string>https://download.kde.org/stable/krita/%version%/krita-%version%.dmg</string>
         <key>USER_AGENT</key>
         <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15</string>
     </dict>
@@ -38,7 +36,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%url%</string>
+                <string>https://download.kde.org/stable/krita/%version%/krita-%version%.dmg</string>
                 <key>filename</key>
                 <string>%NAME%-%version%.dmg</string>
                 <key>request_headers</key>
