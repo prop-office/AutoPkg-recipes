@@ -32,6 +32,21 @@
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
+		<dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>expected_authority_names</key>
+				<array>
+					<string>Developer ID Installer: Google LLC (EQHXZ8M8AV)</string>
+					<string>Developer ID Certification Authority</string>
+					<string>Apple Root CA</string>
+				</array>
+				<key>input_path</key>
+				<string>%pathname%*.pkg</string>
+			</dict>
+		</dict>
     </array>
 </dict>
 </plist>

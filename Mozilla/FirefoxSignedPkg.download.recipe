@@ -34,6 +34,8 @@ See the following URL for possible LOCALE values:
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
@@ -43,8 +45,6 @@ See the following URL for possible LOCALE values:
 				<key>url</key>
 				<string>https://product-details.mozilla.org/1.0/firefox_versions.json</string>
 			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
