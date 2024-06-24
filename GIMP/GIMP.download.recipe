@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of GIMP from gimp.org.</string>
     <key>Identifier</key>
-    <string>com.github.hansen-m.download.gimp</string>
+    <string>com.github.prop-office.autopkg-recipes.download.gimp</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
