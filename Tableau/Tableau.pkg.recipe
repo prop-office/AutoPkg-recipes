@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest Tableau Desktop disk image and makes a pkg.</string>
+	<key>Identifier</key>
+	<string>com.github.prop-office.autopkg-recipes.pkg.tableau-desktop</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>TableauDesktop</string>
+        <key>PACKAGES</key>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.prop-office.autopkg-recipes.download.tableau-desktop</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%pathname%/Tableau Desktop.pkg</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/Tableau App.pkg/payload</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>info_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload</string>
+				<key>plist_keys</key>
+				<dict>
+					<key>CFBundleShortVersionString</key>
+					<string>version</string>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgCopier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/Tableau Desktop-%version%.pkg</string>
+				<key>source_pkg</key>
+				<string>%pathname%/Tableau Desktop.pkg</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%RECIPE_CACHE_DIR%/Tableau Desktop-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/Tableau Desktop-%version%.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%PACKAGES%/Tableau Desktop-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/Tableau Desktop.pkg</string>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
