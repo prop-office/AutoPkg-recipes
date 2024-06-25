@@ -3,18 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Cyberduck and builds a package.</string>
+    <string>Downloads the current release version of DEPNotify and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.pkg.Cyberduck</string>
+    <string>com.github.prop-office.autopkg-recipes.pkg.DEPNotify</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Cyberduck</string>
+        <string>DEPNotify</string>
         <key>PACKAGES</key>
         <string>/Users/admin/Library/AutoPkg/Packages</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.prop-office.autopkg-recipes.download.Cyberduck</string>
+    <string>com.github.prop-office.autopkg-recipes.download.DEPNotify</string>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>Process</key>
@@ -54,7 +54,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>%pkgroot%/Applications/Cyberduck.app/Contents/Info.plist</string>
+                <string>%pkgroot%/Applications/DEPNotify.app/Contents/Info.plist</string>
                 <key>plist_version_key</key>
                 <string>CFBundleShortVersionString</string>
             </dict>
@@ -71,7 +71,7 @@
                     <key>version</key>
                     <string>%version%</string>
                     <key>id</key>
-                    <string>ch.sudo.cyberduck</string>
+                    <string>menu.nomad.DEPNotify</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
