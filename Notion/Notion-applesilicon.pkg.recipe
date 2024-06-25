@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Notion and creates a package.</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.intel.pkg.Notion</string>
+    <string>com.github.prop-office.autopkg-recipes.applesilicon.pkg.Notion</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -16,7 +16,7 @@
     <key>MinimumVersion</key>
     <string>1.0.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.prop-office.autopkg-recipes.intel.download.Notion</string>
+    <string>com.github.prop-office.autopkg-recipes.applesilicon.download.Notion</string>
    <key>Process</key>
     <array>
         <dict>
@@ -104,7 +104,7 @@
                 <key>source_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
                 <key>destination_path</key>
-                <string>%PACKAGES%/%NAME%-intel-%version%.pkg</string>
+                <string>%PACKAGES%/%NAME%-applesilicon-%version%.pkg</string>
             </dict>
         </dict>
         <dict>
@@ -113,9 +113,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%PACKAGES%/%NAME%-intel-%version%.pkg</string>
+                <string>%PACKAGES%/%NAME%-applesilicon-%version%.pkg</string>
                 <key>destination_path</key>
-                <string>%PACKAGES%/%NAME%-intel.pkg</string>
+                <string>%PACKAGES%/%NAME%-applesilicon.pkg</string>
             </dict>
         </dict>
     </array>
