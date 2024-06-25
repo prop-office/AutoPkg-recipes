@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads latest version of DBeaver Community Edition.</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.applesilicon.download.DBeaverCE</string>
+    <string>com.github.prop-office.autopkg-recipes.intel.download.DBeaverCE</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
