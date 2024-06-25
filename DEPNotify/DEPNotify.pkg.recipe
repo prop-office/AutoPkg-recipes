@@ -28,10 +28,6 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%</string>
                 <key>pkgdirs</key>
                 <dict>
-                    <key>Applications</key>
-                    <string>0775</string>
-                </dict>
-                <dict>
                     <key>unpack</key>
                     <string>0775</string>
                 </dict>
