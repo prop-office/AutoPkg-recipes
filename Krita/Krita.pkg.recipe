@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Keka and builds a package.</string>
+    <string>Downloads the latest version of Krita and builds a package.</string>
     <key>Identifier</key>
     <string>com.github.prop-office.autopkg-recipes.pkg.krita</string>
     <key>Input</key>
