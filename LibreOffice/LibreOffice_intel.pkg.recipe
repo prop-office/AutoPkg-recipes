@@ -8,7 +8,7 @@
 LibreOffice Previous is the stable version that has undergone more testing (over a longer time). It is usually recommended for more conservative use.
 LibreOffice Latest is the stable version with the most recent features. Users interested in taking advantage of our most innovative features should download and use our Latest version.</string>
 	<key>Identifier</key>
-	<string>com.github.prop-office.autopkg-recipes.applesilicon.pkg.LibreOffice</string>
+	<string>com.github.prop-office.autopkg-recipes.intel.pkg.LibreOffice</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -19,7 +19,7 @@ LibreOffice Latest is the stable version with the most recent features. Users in
 		<string>x86_64</string>
 	</dict>
 	<key>ParentRecipe</key>
-	<string>com.github.prop-office.autopkg-recipes.applesilicon.download.LibreOffice</string>
+	<string>com.github.prop-office.autopkg-recipes.intel.download.LibreOffice</string>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
