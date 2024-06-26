@@ -20,7 +20,7 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
         <key>ARCH</key>
         <string>aarch64</string>
         <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15</string>
+        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 YaBrowser/24.4.0.0 Safari/537.36</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
