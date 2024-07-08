@@ -19,16 +19,23 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 		<string>Latest</string>
         <key>ARCH</key>
         <string>aarch64</string>
-        <key>USER_AGENT</key>
-        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 YaBrowser/24.4.0.0 Safari/537.36</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>CreateLibreOfficeAuxArchName</string>
 			<key>Comment</key>
-			<string>Try to parse the the 'Latest' or 'Previous' version from current release notes</string>
+			<string>LibreOffice uses both x86_64 AND x86-64 in the download path. Here we build the x86-64 or aarch64 part.</string>
+			<key>Arguments</key>
+			<dict>
+				<key>arch_name</key>
+				<string>%ARCH%</string>
+			</dict>
+		</dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
 			<key>Arguments</key>
@@ -40,14 +47,6 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 			</dict>
 		</dict>
 		<dict>
-			<key>Comment</key>
-			<string>
-				The current (late June 2021) dmg download URL at
-				https://www.libreoffice.org/download/download/?type=mac-x86_64
-				takes us to a JavaScript-heavy page that eventually redirects to
-				the download, but the download is at a predictable URL once we
-				know the version. So we just assemble that URL.
-			</string>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
@@ -56,11 +55,6 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 				<string>https://www.libreoffice.org/donate/dl/mac-%ARCH%/%version%/en/LibreOffice_%version%_MacOS_%ARCH%.dmg</string>
 				<key>filename</key>
 				<string>%NAME%-%ARCH%-%version%.dmg</string>
-                <key>request_headers</key>
-                    <dict>
-                        <key>User-Agent</key>
-                        <string>%USER_AGENT%</string>
-                    </dict>
 			</dict>
 		</dict>
 		<dict>
