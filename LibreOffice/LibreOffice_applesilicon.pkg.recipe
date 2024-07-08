@@ -17,6 +17,8 @@ LibreOffice Latest is the stable version with the most recent features. Users in
 		<string>Latest</string>
 		<key>ARCH</key>
 		<string>aarch64</string>
+        <key>PACKAGES</key>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
 	</dict>
 	<key>ParentRecipe</key>
 	<string>com.github.prop-office.autopkg-recipes.applesilicon.download.LibreOffice</string>
