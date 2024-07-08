@@ -38,8 +38,6 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 		<dict>
 			<key>Processor</key>
 			<string>URLTextSearcher</string>
-			<key>Comment</key>
-			<string>Try to parse the the 'Latest' or 'Previous' version from current release notes</string>
 			<key>Arguments</key>
 			<dict>
 				<key>re_pattern</key>
@@ -51,14 +49,6 @@ The architecture (ARCH) can be 'x86_64' or 'aarch64'
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-			<key>Comment</key>
-			<string>
-				The current (late June 2021) dmg download URL at
-				https://www.libreoffice.org/download/download/?type=mac-x86_64
-				takes us to a JavaScript-heavy page that eventually redirects to
-				the download, but the download is at a predictable URL once we
-				know the version. So we just assemble that URL.
-			</string>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
