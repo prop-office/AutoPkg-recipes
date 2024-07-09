@@ -23,13 +23,13 @@ and enabling installation on non-boot volumes.</string>
 	<key>Process</key>
 	<array>
 		<dict>
+			<key>Processor</key>
+			<string>AdobeReaderRepackager</string>
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
 				<string>%pathname%</string>
 			</dict>
-			<key>Processor</key>
-			<string>AdobeReaderRepackager</string>
 		</dict>
 		<dict>
 			<key>Processor</key>

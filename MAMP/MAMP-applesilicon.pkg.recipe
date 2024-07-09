@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of MAMP and builds a package.</string>
+	<key>Identifier</key>
+	<string>com.github.prop-office.autopkg-recipes.applesilicon.pkg.MAMP</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>MAMP</string>
+        <key>PACKAGES</key>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
+	</dict>
+	<key>MinimumVersion</key>
+    <string>2.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.prop-office.autopkg-recipes.applesilicon.download.MAMP</string>
+	<key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/MAMP-applesilicon-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/MAMP-applesilicon-%version%.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%PACKAGES%/MAMP-applesilicon-%version%.pkg</string>
+                <key>destination_path</key>
+                <string>%PACKAGES%/MAMP-applesilicon.pkg</string>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
