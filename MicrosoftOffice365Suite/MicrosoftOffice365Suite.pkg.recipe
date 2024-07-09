@@ -8,6 +8,8 @@
 	<string>com.github.prop-office.autopkg-recipes.pkg.MicrosoftOffice365Suite</string>
 	<key>Input</key>
 	<dict>
+        <key>PACKAGES</key>
+        <string>/Users/admin/Library/AutoPkg/Packages</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
