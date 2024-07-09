@@ -46,7 +46,7 @@
                <key>url</key>
                <string>%DOWNLOAD_URL_BASE%%ID%</string>
                <key>filename</key>
-               <string>Microsoft Office 365 Suite_%version%.pkg</string>
+               <string>Microsoft_Office_365_Suite_%version%.pkg</string>
             </dict>
          </dict>
          <dict>
