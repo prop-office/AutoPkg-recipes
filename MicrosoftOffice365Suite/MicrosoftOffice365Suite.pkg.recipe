@@ -5,14 +5,14 @@
 	<key>Description</key>
 	<string>Uses parent download recipe to download the latest unlicensed Microsoft Office 365 Suite installer package.</string>
 	<key>Identifier</key>
-	<string>com.github.prop-office.autopkg-recipes.applesilicon.pkg.MicrosoftOffice365Suite</string>
+	<string>com.github.prop-office.autopkg-recipes.pkg.MicrosoftOffice365Suite</string>
 	<key>Input</key>
 	<dict>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.prop-office.autopkg-recipes.applesilicon.download.MicrosoftOffice365Suite</string>
+	<string>com.github.prop-office.autopkg-recipes.download.MicrosoftOffice365Suite</string>
 	<key>Process</key>
 	<array>
         <dict>
