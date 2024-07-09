@@ -5,7 +5,7 @@
       <key>Description</key>
       <string>Downloads the latest Microsoft Office 365 Suite SKU-less installer package.</string>
       <key>Identifier</key>
-      <string>com.github.rtrouton.download.MicrosoftOffice365Suite</string>
+      <string>ccom.github.prop-office.autopkg-recipes.applesilicon.download.MicrosoftOffice365Suite</string>
       <key>Input</key>
       <dict>
          <key>NAME</key>
