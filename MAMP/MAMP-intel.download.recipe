@@ -7,7 +7,7 @@
 
 ARCH_TYPE is "Intel-x86" or "M1-arm"</string>
 	<key>Identifier</key>
-	<string>com.github.n8felton.download.MAMP</string>
+	<string>com.github.prop-office.autopkg-recipes.intel.download.MAMP</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
