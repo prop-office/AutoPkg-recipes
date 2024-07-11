@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
     <string>0.2.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.prop-office.autopkg-recipes.download.slack</string>
+	<string>com.github.prop-office.autopkg-recipes.download.Slack</string>
 	<key>Process</key>
     <array>
 		<dict>

@@ -44,7 +44,7 @@
 					<string>Apple Root CA</string>
 				</array>
 				<key>input_path</key>
-				<string>%pathname%*.pkg</string>
+				<string>%pathname%</string>
 			</dict>
 		</dict>
     </array>
