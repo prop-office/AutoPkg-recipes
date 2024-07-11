@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Krita and builds a package.</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.pkg.krita</string>
+    <string>com.github.prop-office.autopkg-recipes.pkg.Krita</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -14,7 +14,7 @@
         <string>/Users/admin/Library/AutoPkg/Packages</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.prop-office.autopkg-recipes.download.krita</string>
+    <string>com.github.prop-office.autopkg-recipes.download.Krita</string>
     <key>Process</key>
     <array>
         <dict>

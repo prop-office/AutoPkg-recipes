@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the latest version of Krita.</string>
     <key>Identifier</key>
-    <string>com.github.prop-office.autopkg-recipes.download.krita</string>
+    <string>com.github.prop-office.autopkg-recipes.download.Krita</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -38,7 +38,7 @@
                 <key>url</key>
                 <string>https://download.kde.org/stable/krita/%version%/krita-%version%.dmg</string>
                 <key>filename</key>
-                <string>%NAME%-%version%.dmg</string>
+                <string>%NAME%.dmg</string>
                 <key>request_headers</key>
                     <dict>
                         <key>User-Agent</key>
