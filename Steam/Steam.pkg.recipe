@@ -51,6 +51,8 @@
             <dict>
                 <key>input_plist_path</key>
                 <string>%pkgroot%/Applications/Steam.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+                <string>CFBundleVersion</string>
             </dict>
         </dict>
         <dict>
