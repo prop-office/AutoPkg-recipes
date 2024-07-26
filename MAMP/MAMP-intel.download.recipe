@@ -45,6 +45,11 @@ ARCH_TYPE is "Intel-x86" or "M1-arm"</string>
 				<string>%DOWNLOAD_URL%/%version%/%filename%.pkg</string>
 				<key>filename</key>
 				<string>MAMP-intel-%version%.pkg</string>
+				<key>request_headers</key>
+                    <dict>
+                        <key>User-Agent</key>
+                        <string>%USER_AGENT%</string>
+                    </dict>
 			</dict>
 		</dict>
 		<dict>
