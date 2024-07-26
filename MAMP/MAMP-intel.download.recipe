@@ -18,6 +18,8 @@ ARCH_TYPE is "Intel-x86" or "M1-arm"</string>
 		<string>https://www.mamp.info/en/downloads</string>
 		<key>ARCH_TYPE</key>
 		<string>Intel-x86</string>
+		<key>USER_AGENT</key>
+        <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
