@@ -17,7 +17,7 @@ ARCH_TYPE is "Intel-x86" or "M1-arm"</string>
 		<key>SEARCH_URL</key>
 		<string>https://www.mamp.info/en/downloads</string>
 		<key>ARCH_TYPE</key>
-		<string>M1-arm</string>
+		<string>Apple-chip</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -31,7 +31,7 @@ ARCH_TYPE is "Intel-x86" or "M1-arm"</string>
 				<key>url</key>
 				<string>%SEARCH_URL%</string>
 				<key>re_pattern</key>
-				<string>(?P&lt;filename&gt;MAMP_MAMP_PRO_(?P&lt;version&gt;((?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)))\-%ARCH_TYPE%).pkg"</string>
+				<string>(?P&lt;filename&gt;MAMP-MAMP-PRO-(?P&lt;version&gt;((?:(\d+)\.)?(?:(\d+)\.)?(\*|\d+)))\-%ARCH_TYPE%).pkg"</string>
 			</dict>
 		</dict>
 		<dict>
